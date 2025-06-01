@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Deluxe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+
+        <!-- Mode Selection Screen -->
+        <div id="mode-selection-screen" class="screen active">
+            <h1>Tic Tac Toe Deluxe</h1>
+            <p id="total-score-display">Total Score: 0</p>
+            <button id="hvh-button" class="mode-button">Human vs Human</button>
+            <button id="hva-button" class="mode-button">Human vs AI</button>
+            <button id="quit-button-main" class="control-button">Quit (Simulated)</button>
+            <!-- App Open Ad Placeholder -->
+            <div id="app-open-ad-placeholder" class="ad-placeholder" style="display:none;">App Open Interstitial Ad Would Show Here</div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="top-bar">
+                <p id="status-text">Player X's Turn</p>
+                <p id="current-score-display">Score: 0</p>
+            </div>
+
+            <div class="game-board">
+                <!-- Cells will be dynamically added by JS or hardcoded here -->
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <div class="controls">
+                <button id="restart-button" class="control-button">Restart</button>
+                <button id="main-menu-button" class="control-button">Main Menu</button>
+                <button id="watch-ad-button" class="control-button special">Watch Ad for Points</button>
+            </div>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div id="game-over-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <h2 id="game-over-message">Game Over!</h2>
+                <button id="play-again-modal-button" class="modal-button">Play Again</button>
+                <button id="main-menu-modal-button" class="modal-button">Main Menu</button>
+            </div>
+        </div>
+
+        <!-- Banner Ad Placeholder (Bottom) -->
+        <div id="banner-ad-placeholder" class="banner-ad" style="display:none;">
+            Banner Ad Would Show Here
+        </div>
+
+        <!-- Interstitial/Rewarded Ad Modal Placeholder -->
+        <div id="full-screen-ad-modal" class="modal ad-modal-styling" style="display:none;">
+            <div class="modal-content">
+                <h2 id="full-screen-ad-text">Showing Ad...</h2>
+                <p>(This is a placeholder for a real ad)</p>
+                <button id="close-ad-modal-button">Close Ad (Simulated)</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
